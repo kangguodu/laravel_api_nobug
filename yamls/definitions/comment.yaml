@@ -1,0 +1,20 @@
+Comment:
+  properties:
+    content:
+      description: 評價內容
+      type: string
+    additional:
+      description: 追加內容
+      type: string
+    create_at:
+      description: 時間
+      type: string
+    addtime:
+      description: 追加時間，1為1天內
+      type: integer
+    image:
+      description: 評價圖片
+      type: string
+    member:
+      description: 買家信息(頭像，暱稱，下單規格)
+      type: string

@@ -1,0 +1,64 @@
+AddOrder:
+  required:
+    - group_id
+    - address_id
+    - goods
+  properties:
+    group_id:
+      type: integer
+      description: 商品详情购物组编号
+      example: 816627858
+    group_order_id:
+      type: integer
+      description: 拼团的团编号(参团时，需要传入)
+      example: 362345315141120698
+    address_id:
+      type: integer
+      description: 收货地址编号
+      example: 972762720
+    is_app:
+      type: integer
+      description: 是否是app发送的请求
+      enum: [0,1]
+      example: 1
+    payment_type:
+      type: integer
+      description: |
+        支付方式
+        | 值  | 说明 |
+        | 2   | 货到付款 |
+      enum: [2]
+      example: 2
+    integration:
+      type: integer
+      description: "支付积分金额"
+      example: 0
+    source_type:
+      type: integer
+      description: |
+        下单来源:
+        | 值 | 说明 |
+        | ------ | ------ |
+        | 0 | 客户自己下单 |
+        | 1 | 参团下单 |
+        | 2 | 开团下单 |
+      enum: [0,1,2]
+      example: 0
+    source_channel:
+      type: integer
+      description: 默认 0
+      example: 0
+    goods:
+      type: array
+      items:
+        properties:
+          goods_id:
+            type: integer
+            description: 商品编号
+          sku_id:
+            type: integer
+            description: 规格编号
+          sku_number:
+            type: integer
+            description: 购买数量
+      example: [{"sku_id":"8868278587","sku_number":5,"goods_id":"567441461"}]

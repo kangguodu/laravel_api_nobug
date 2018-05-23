@@ -1,0 +1,26 @@
+Address:
+  properties:
+    id:
+      type: integer
+      description: 收货地址编号
+      example: 0
+    name:
+      type: string
+      description: 收件人名称
+      example: '收件人'
+    mobile:
+      type: string
+      description: 手机号码
+      example: '0963636363'
+    province_id:
+      type: integer
+      description: 省份编号
+      example: 1
+    city_id:
+      type: integer
+      description: 市编号
+      example: 2
+    address:
+      type: string
+      description: 详细地址
+      example: '小明村21号'
